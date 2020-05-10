@@ -1,0 +1,90 @@
+
+<body class="container11">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item active">
+<a class="nav-link" href="http://localhost:3000/inicio">Categorias</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="http://localhost:3000/users/new">Cadastro Cliente</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="http://localhost:3000/users">Clientes</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="http://localhost:3000/books/new">Cadastro Livro</a>
+<li>
+<li class="nav-item">
+<a class="nav-link" href="http://localhost:3000/books">Livros</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="http://localhost:3000/estilos">Cadastro Estilos</a>
+<li>
+<li class="nav-item">
+<a class="nav-link" href="">Fale Conosco</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="">Login</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="">Log Out</a>
+</li>
+</ul>
+<form class="form-inline my-2 my-lg-0">
+<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+</form>
+</div>
+</nav>
+
+<div class="container1">
+<p id="notice"><%= notice %></p>
+ <div class="m-4">
+
+<p>
+ <h2> <strong><%= @book.titulo %></strong></h2>
+</p>
+
+<p>
+  <strong>Autor:</strong>
+  <%= @book.autor %>
+</p>
+
+<p>
+  <strong>Estilo:</strong>
+  <%= @book.estilo.categoria %>
+</p>
+
+<h3>
+  <strong>Preco: </strong>R$
+  <%= @book.preco %>
+</h3>
+
+<p>
+  <%= image_tag @book.avatar.url (:medium) %>
+</p>
+
+<div class="container2">
+<p>
+  <strong>Resenha:</strong>
+  <%= @book.resenha %>
+</p>
+</div>
+
+<div class="container3">
+
+<form class="form-inline">
+    <button class="btn btn-outline-success my-2 mx-5" type="submit"><%= link_to 'Editar', edit_book_path(@book) %></button>
+    <button class="btn btn-outline-success" type="submit"><%= link_to 'Voltar', books_path %></button>
+    <button class="btn btn-outline-success my-2 mx-5" type="submit"><%= link_to 'Comprar', books_path %></button>
+  </form>
+     </div>
+  </div>
+</div>
+</body>

@@ -1,0 +1,78 @@
+
+<body class="container14">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item active">
+<a class="nav-link" href="http://localhost:3000/inicio">Categorias</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="http://localhost:3000/users/new">Cadastro Cliente</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="http://localhost:3000/users">Clientes</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="http://localhost:3000/books/new">Cadastro Livro</a>
+<li>
+<li class="nav-item">
+<a class="nav-link" href="http://localhost:3000/books">Livros</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="http://localhost:3000/estilos">Cadastro Estilos</a>
+<li>
+<li class="nav-item">
+<a class="nav-link" href="">Fale Conosco</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="">Login</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="">Log Out</a>
+</li>
+</ul>
+<form class="form-inline my-2 my-lg-0">
+<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+</form>
+</div>
+</nav>
+
+
+<%= form_with(model: estilo, local: true) do |form| %>
+  <% if estilo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(estilo.errors.count, "error") %> prohibited this estilo from being saved:</h2>
+
+      <ul>
+        <% estilo.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="m-4">
+
+<div class="container13">
+<h2>Cadastro Estilo:</h2>
+
+<div class="form-group col-4 md-6 m-4">
+<label><%= form.label :categoria %></label>
+<input placeholder="Nome Completo" class="form-control" <%= form.text_field :categoria %>
+</div>
+
+
+
+  <form class="form-inline">
+    <button class="btn btn-outline-success my-2 mx-5" type="submit">Criar</button>
+  </form>
+
+<% end %>
+</div>
+</div>
+</body>

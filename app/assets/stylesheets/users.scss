@@ -1,0 +1,88 @@
+
+
+.container6, .container8  {
+
+    background-image: url("https://media.newyorker.com/photos/592b3b0421334b79eed173f2/master/w_2560%2Cc_limit/Amazon-Store-Columbus-Circle.jpg");
+    background-repeat: no-repeat;
+    background-position:  center;
+    background-attachment: fixed;
+    background-size: cover;
+     
+    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+
+}
+
+.box-formulario1  {
+
+    background-color: #857e79;
+    opacity: .85;
+    width: 950px;
+    margin-left: 100px;
+    
+    
+
+    h2   {
+
+        color: black;
+        font-weight: 900;
+        padding-top: 1em;
+    }
+
+
+    p {
+        font-weight: 900;
+        font-size: 1em;
+    }
+   
+}
+
+
+.box-formulario2  {
+
+    background-color: #857e79;
+    opacity: .85;
+    width: 900px;
+    margin-left: 200px;
+    margin-top: 50px;
+    padding-top: 50px;
+
+    p {
+        font-weight: 900;
+        font-size: 1em;
+    }
+
+}
+
+
+.box-formulario2, .cadastro {
+
+    a:link, a:visited {
+        background-color: #18a718;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+      }
+      
+      a:hover, a:active {
+
+        background-color: #268326;
+      }
+
+}
+
+.cadastro  {
+
+    background-color: #857e79;
+    opacity: .85;
+    width: 900px;
+    padding-bottom: 1em;
+    margin-left: 200px;
+    margin-top: 50px;
+    padding-top: 50px;
+       
+
+}

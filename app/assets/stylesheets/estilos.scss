@@ -1,0 +1,50 @@
+.container11, .container14, .container16  {
+
+  background-image: url("http://corretorademodafortaleza.com/wp-content/uploads/2016/10/16249618-Vintage-abstract-seamless-pattern-in-subtle-shades-of-white-and-gray-colors-for-wallpaper-background-Stock-Vector.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+
+}
+
+.botao-estilo {
+
+    
+    a:link, a:visited {
+        background-color: #18a718;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+      }
+      
+      a:hover, a:active {
+
+        background-color: #18a718;
+      }
+
+
+}
+
+.container12, .container13, .container15 {
+
+    background-color: whitesmoke;
+    opacity: .75;
+    width: 800px;
+    margin-left: 180px;
+    margin-top: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    h2  {
+
+      margin-left: 1em;
+    }
+}
+

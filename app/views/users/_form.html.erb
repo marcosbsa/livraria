@@ -1,0 +1,100 @@
+
+<body class="container6">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item active">
+<a class="nav-link" href="http://localhost:3000/inicio">Categorias</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="http://localhost:3000/users/new">Cadastro Cliente</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="http://localhost:3000/users">Clientes</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="http://localhost:3000/books/new">Cadastro Livro</a>
+<li>
+<li class="nav-item">
+<a class="nav-link" href="http://localhost:3000/books">Livros</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="http://localhost:3000/estilos">Cadastro Estilos</a>
+<li>
+<li class="nav-item">
+<a class="nav-link" href="">Fale Conosco</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="">Login</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="">Log Out</a>
+</li>
+</ul>
+<form class="form-inline my-2 my-lg-0">
+<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+</form>
+</div>
+</nav>
+
+<%= form_with(model: user, local: true) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="box-formulario1">
+<div class="m-4">
+
+<h2>Cadastro Cliente:</h2>
+
+<div class="form-group col-6 md-6 m-4">
+<p><label><%= form.label :nome %></label>
+<input placeholder="Nome Completo" class="form-control" <%= form.text_field :nome %></p>
+</div>
+
+<div class="form-group col-8 md-6 m-4">
+<p><label><%= form.label :endereco %></label>
+<input placeholder="Rua, Numero, Bairro, CEP, Cidade e Estado abreviado" class="form-control" <%= form.text_field :endereco %></p>
+</div>
+
+<div class="form-group col-md-4 m-4">
+<p><label><%= form.label :email %></label>
+<input placeholder="Email" class="form-control" <%= form.text_field :email %></p>
+</div>
+
+<div class="col-3 col-form-label m-4">
+<p><label><%= form.label :aniversario %></label>
+<input type="date" class="form-control" <%= form.text_field :aniversario %></p>
+</div>
+
+<div class="form-group col-md-3 m-4">
+<p><label><%= form.label :cpf %></label>
+<input placeholder="Somente Números" class="form-control" <%= form.text_field :cpf %></p>
+</div>
+
+<div class="form-group col-md-3 m-4">
+<p><label><%= form.label :telefone %></label>
+<input placeholder="(DDD) - XXXXXXXX " class="form-control"<%= form.text_field :telefone %></p>
+</div>
+
+
+  <form class="form-inline">
+    <button class="btn btn-success my-2 mx-5" type="submit">Cadastrar</button>
+  </form>
+</div>
+<% end %>
+</div>
+</body>
